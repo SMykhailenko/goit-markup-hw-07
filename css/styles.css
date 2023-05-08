@@ -77,6 +77,25 @@ p {
 }
 /**
   |============================
+  | CARD-SET
+  |============================
+*/
+.card-set {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--indent);
+}
+.card-set-item {
+  width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
+}
+
+.cards {
+  --items: 4;
+}
+/**
+  |============================
   | Header
   |============================
 */
@@ -188,9 +207,6 @@ p {
   |============================
 */
 .hero {
-  min-width: 320px;
-  max-width: 448px;
-
   padding: 112px 0;
   margin-left: auto;
   margin-right: auto;
@@ -204,12 +220,6 @@ p {
   background-size: cover;
 }
 
-/* Tablet styles 768px & > */
-@media only screen and (min-width: 768px) {
-  .hero {
-  }
-}
-
 /* Desktop styles 1158px & > */
 @media only screen and (min-width: 1158px) {
   .hero {
@@ -219,17 +229,29 @@ p {
 }
 
 .hero-text {
-  max-width: 496px;
+  max-width: 320px;
+
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 48px;
 
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: #ffffff;
+}
+/* Tablet styles 768px & > */
+@media only screen and (min-width: 768px) {
+  .hero-text {
+    max-width: 496px;
+
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+  }
 }
 
 .hero-btn {
@@ -263,15 +285,18 @@ p {
   | Section 2
   |============================
 */
-.title {
-  margin-bottom: 8px;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+.card-set {
+  --indent: 72px;
+}
+.card-set-item {
+  --items: 1;
+}
+.skill-set {
+  padding: 96px 0;
 }
 .submain-text {
+  margin-bottom: 72px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -280,6 +305,23 @@ p {
   text-transform: capitalize;
   color: #2e2f42;
 }
+.skill-logo {
+  display: none;
+}
+
+.title {
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+  color: #2e2f42;
+}
+
 .text {
   font-weight: 400;
   font-size: 16px;
@@ -287,34 +329,55 @@ p {
   letter-spacing: 0.02em;
   color: #434455;
 }
-
-.skill-logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 112px;
-  width: 264px;
-  background-color: #f4f4fd;
-  border-radius: 4px;
-  margin-bottom: 8px;
+/* Tablet styles 768px & > */
+@media only screen and (min-width: 768px) {
+  .card-set-item {
+    --items: 2;
+    /* width: 356px; */
+  }
+  .card-set {
+    --indent: 24px;
+  }
+  .skill-logo {
+    display: none;
+  }
+  .title {
+    text-align: left;
+  }
+  .text {
+    font-weight: 500;
+  }
 }
 
-.skill-set {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
-
-.skill-map {
-  padding-right: 24px;
-}
-
-.submain-text {
-  margin-bottom: 72px;
-}
-
-.focus {
-  width: 264px;
-  background-color: #ffffff;
+/* Desktop styles 1158px & > */
+@media only screen and (min-width: 1158px) {
+  .card-set {
+  }
+  .card-set-item {
+    --items: 4;
+  }
+  .skill-set {
+    padding: 120px 0;
+  }
+  .skill-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 112px;
+    width: 264px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
+  }
+  .text {
+    font-weight: 500;
+  }
 }
 
 /**
@@ -322,8 +385,20 @@ p {
   | Section 3
   |============================
 */
+.photo {
+  --items: 3;
+}
+
 .img-section {
+  display: none;
+
   padding-bottom: 120px;
+}
+/* Desktop styles 1158px & > */
+@media only screen and (min-width: 1158px) {
+  .img-section {
+    display: inline;
+  }
 }
 /**
   |============================
@@ -557,30 +632,6 @@ p {
   text-transform: uppercase;
   color: #4d5ae5;
   margin-bottom: 16px;
-}
-
-/**
-  |============================
-  | CARD-SET
-  |============================
-*/
-.card-set {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: var(--indent);
-}
-.card-set-item {
-  width: calc((100% - var(--indent) * (var(--items) - 1)) / var(--items));
-}
-
-.photo {
-  --items: 3;
-}
-
-.cards {
-  --items: 4;
 }
 
 /**
