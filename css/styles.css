@@ -15,11 +15,6 @@
   | RESET styles START
   |============================
 */
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
 
 .link {
   text-decoration: none;
@@ -42,6 +37,12 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 /**
   |============================
   | Container
@@ -55,8 +56,8 @@ p {
 
   margin-left: auto;
   margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
 
   outline: 2px solid red;
   outline-offset: -2px;
@@ -248,7 +249,6 @@ p {
   .hero-text {
     max-width: 496px;
 
-    font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
   }
@@ -292,10 +292,21 @@ p {
   --items: 1;
 }
 .skill-set {
-  padding: 96px 0;
+  margin: 96px 0;
+}
+.sub-title {
+  margin-bottom: 72px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2e2f42;
 }
 .submain-text {
-  margin-bottom: 72px;
+  margin-bottom: 8px;
 
   font-weight: 700;
   font-size: 36px;
@@ -312,9 +323,9 @@ p {
 .title {
   margin-bottom: 8px;
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -333,18 +344,18 @@ p {
 @media only screen and (min-width: 768px) {
   .card-set-item {
     --items: 2;
-    /* width: 356px; */
   }
+
   .card-set {
     --indent: 24px;
   }
+
   .skill-logo {
     display: none;
   }
+
   .title {
     text-align: left;
-  }
-  .text {
   }
 }
 
@@ -356,7 +367,7 @@ p {
     --items: 4;
   }
   .skill-set {
-    padding: 120px 0;
+    margin: 120px 0;
   }
   .skill-logo {
     display: flex;
@@ -373,7 +384,11 @@ p {
     font-size: 20px;
     line-height: 1.2;
   }
-  .text {
+  .submain-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: left;
   }
 }
 
@@ -391,6 +406,12 @@ p {
 
   padding-bottom: 120px;
 }
+/* Tablet styles 768px & > */
+@media only screen and (min-width: 768px) {
+  .skill-list {
+    row-gap: 72px;
+  }
+}
 /* Desktop styles 1158px & > */
 @media only screen and (min-width: 1158px) {
   .img-section {
@@ -402,33 +423,38 @@ p {
   | Section 4 Team photos
   |============================
 */
+
 .team-background {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  margin: 120px 0;
+
   background: #f4f4fd;
 }
 
-.main-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-  color: #2e2f42;
+.photo-back {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.photo-back {
+.team-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0;
+
   background-color: #ffffff;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
+  border-top: none;
 }
 
 .team-social {
   display: flex;
   justify-content: center;
   gap: 24px;
+  margin: 8px 16px 0;
 }
 
 .team-item {
@@ -463,22 +489,22 @@ p {
   align-items: center;
 }
 
-.team-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 32px 0;
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-  border-radius: 0px 0px 4px 4px;
-  border-top: none;
+/* Tablet styles 768px & > */
+@media only screen and (min-width: 768px) {
+  .team-list {
+    column-gap: 24px;
+    row-gap: 64px;
+    margin: 0 108px;
+  }
 }
 
-.title-center {
-  text-align: center;
-  margin-bottom: 8px;
+/* Desktop styles 1158px & > */
+@media only screen and (min-width: 1158px) {
+  .team-list {
+    margin: 0 156px;
+  }
 }
+
 /**
   |============================
   | Section 5
@@ -633,10 +659,10 @@ p {
 
 /**
   |============================
-  | Portfolio page
+  | Portfolio
   |============================
-*
-/* logo placering */
+*/
+
 .button {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -1037,3 +1063,12 @@ p {
   border-radius: 4px;
   border: none;
 }
+/* .main-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2e2f42;
+} */
