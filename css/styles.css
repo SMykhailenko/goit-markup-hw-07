@@ -345,7 +345,6 @@ p {
     text-align: left;
   }
   .text {
-    font-weight: 500;
   }
 }
 
@@ -373,10 +372,8 @@ p {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
-    text-align: left;
   }
   .text {
-    font-weight: 500;
   }
 }
 
