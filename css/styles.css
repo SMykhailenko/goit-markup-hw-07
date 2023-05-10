@@ -293,8 +293,29 @@ img {
 .card-set-item {
   --items: 1;
 }
+.skill-logo {
+  display: none;
+}
 .skill-set {
   margin: 96px 0;
+}
+.features-title {
+  margin-bottom: 8px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-transform: capitalize;
+  color: #2e2f42;
+}
+.features-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
 }
 .sub-title {
   margin-bottom: 72px;
@@ -307,45 +328,14 @@ img {
   text-transform: capitalize;
   color: #2e2f42;
 }
-.submain-text {
-  margin-bottom: 8px;
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  text-transform: capitalize;
-  color: #2e2f42;
-}
-.skill-logo {
-  display: none;
-}
-
-.title {
-  margin-bottom: 8px;
-
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-
-  color: #2e2f42;
-}
-
-.text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
-}
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
   .card-set-item {
     --items: 2;
+  }
+  .skill {
+    width: 768px;
   }
 
   .card-set {
@@ -355,8 +345,10 @@ img {
   .skill-logo {
     display: none;
   }
-
-  .title {
+  .skill-list {
+    row-gap: 72px;
+  }
+  .features-title {
     text-align: left;
   }
 }
@@ -381,16 +373,13 @@ img {
     border-radius: 4px;
     margin-bottom: 8px;
   }
-  .title {
+  .features-title {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
   }
-  .submain-text {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    text-align: left;
+  .features-text {
+    font-weight: 400;
   }
 }
 
@@ -402,22 +391,23 @@ img {
 .photo {
   --items: 3;
 }
+.photo-item {
+  width: 360px;
+}
 
 .img-section {
   display: none;
-
-  padding-bottom: 120px;
 }
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
-  .skill-list {
-    row-gap: 72px;
-  }
 }
 /* Desktop styles 1158px & > */
 @media only screen and (min-width: 1158px) {
   .img-section {
     display: inline;
+  }
+  .container {
+    width: 1158px;
   }
 }
 /**
@@ -425,8 +415,8 @@ img {
   | Section 4 Team photos
   |============================
 */
-.container {
-  width: 296px;
+.team-photo-item {
+  width: 264px;
 }
 
 .team-background {
@@ -449,7 +439,24 @@ img {
   border-radius: 0px 0px 4px 4px;
   border-top: none;
 }
+.team-title {
+  margin-bottom: 8px;
 
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.team-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #434455;
+}
 .team-social {
   display: flex;
   justify-content: center;
@@ -492,9 +499,6 @@ img {
 
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
-  .container {
-    width: 582px;
-  }
   .team-list {
     column-gap: 24px;
     row-gap: 64px;
@@ -504,7 +508,7 @@ img {
 /* Desktop styles 1158px & > */
 @media only screen and (min-width: 1158px) {
   .container {
-    width: 1470px;
+    width: 1158px;
   }
 }
 
@@ -514,8 +518,8 @@ img {
   |============================
 */
 .customer-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  margin-top: 120px;
+  margin-bottom: 120px;
 }
 
 .custemers-line-height {
