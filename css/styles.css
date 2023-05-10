@@ -56,8 +56,8 @@ img {
 
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 16px;
+  padding-right: 16px;
 
   outline: 2px solid red;
   outline-offset: -2px;
@@ -67,6 +67,8 @@ img {
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 736px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -423,17 +425,15 @@ img {
   | Section 4 Team photos
   |============================
 */
+.container {
+  width: 296px;
+}
 
 .team-background {
+  justify-content: center;
   margin: 120px 0;
 
   background: #f4f4fd;
-}
-
-.photo-back {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 .team-wrapper {
@@ -453,8 +453,9 @@ img {
 .team-social {
   display: flex;
   justify-content: center;
+  min-width: 264px;
   gap: 24px;
-  margin: 8px 16px 0;
+  margin-top: 8px;
 }
 
 .team-item {
@@ -491,17 +492,19 @@ img {
 
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
+  .container {
+    width: 582px;
+  }
   .team-list {
     column-gap: 24px;
     row-gap: 64px;
-    margin: 0 108px;
   }
 }
 
 /* Desktop styles 1158px & > */
 @media only screen and (min-width: 1158px) {
-  .team-list {
-    margin: 0 156px;
+  .container {
+    width: 1470px;
   }
 }
 
