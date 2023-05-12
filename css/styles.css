@@ -41,6 +41,9 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+
+  /* object-fit: cover;
+  object-position: center; */
 }
 
 .button {
@@ -296,15 +299,24 @@ img {
   text-align: center;
 
   background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/Hero-logo.jpg);
+    url(../images/Hero/hero-mob@1x.jpg);
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
+@media only screen and (min-width: 429px) and (max-width: 767px) {
+  .hero {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/Hero/hero-desk@1x.jpg);
+  }
+}
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/Hero/hero-desk@1x.jpg);
+  }
   .hero-text {
     max-width: 496px;
 
@@ -347,15 +359,10 @@ img {
 }
 
 .hero-text {
-  max-width: 320px;
-
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 48px;
 
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
@@ -782,6 +789,19 @@ img {
   border-radius: 4px;
   border: none;
 }
+@media only screen and (min-width: 768px) and (max-width: 1157px) {
+  .footer-width {
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    column-gap: 24px;
+    row-gap: 72px;
+
+    max-width: 552px;
+  }
+}
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
   .footer-media {
@@ -794,15 +814,6 @@ img {
 
     color: #f4f4fd;
     background: #2e2f42;
-  }
-  .foot {
-    display: flex;
-    flex-wrap: wrap;
-
-    column-gap: 24px;
-    row-gap: 72px;
-
-    max-width: 552px;
   }
 
   .foot-text {
@@ -876,14 +887,9 @@ img {
 
     gap: 16px;
   }
-
-  .foot {
+  .footer-width {
+    display: flex;
     align-items: baseline;
-
-    column-gap: 0px;
-    row-gap: 0px;
-
-    max-width: 1158px;
   }
 
   .footer-icons {
