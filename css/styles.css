@@ -1003,8 +1003,8 @@ img {
 
   color: #2e2f42;
 }
+
 .mobile-contacts {
-  margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -1014,6 +1014,9 @@ img {
   .mobile-menu-phone {
     font-size: 28px;
   }
+}
+.current-page {
+  color: #4d5ae5;
 }
 .mobile-menu-phone {
   font-weight: 700;
