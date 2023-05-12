@@ -67,8 +67,8 @@ img {
   padding-left: 16px;
   padding-right: 16px;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
 
 /* Tablet styles 768px & > */
@@ -303,26 +303,16 @@ img {
   background-position: center;
   background-size: cover;
 }
-@media only screen and (min-width: 429px) and (max-width: 767px) {
-  .hero {
-    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/Hero/hero-desk@1x.jpg);
-  }
-}
-/* Tablet styles 768px & > */
-@media only screen and (min-width: 768px) {
-  .hero {
-    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/Hero/hero-desk@1x.jpg);
-  }
-  .hero-text {
-    max-width: 496px;
+.hero-text {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
 
-    font-size: 56px;
-    line-height: 1.07;
-  }
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #ffffff;
 }
-
 .hero-btn {
   min-width: 169px;
   height: 56px;
@@ -342,29 +332,43 @@ img {
   transition-timing-function: var(--cubic-hover);
 }
 
-.button:hover,
-.button:focus {
-  color: #ffffff;
-  background: #404bbf;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+@media only screen and (min-width: 429px) and (max-width: 767px) {
+  .hero {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/Hero/hero-desk@1x.jpg);
+  }
 }
+/* Tablet styles 768px & > */
+@media only screen and (min-width: 768px) {
+  .hero {
+    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/Hero/hero-desk@1x.jpg);
+  }
+  .hero-text {
+    margin-bottom: 36px;
+
+    max-width: 496px;
+    margin-bottom: 36px;
+    font-size: 56px;
+    line-height: 1.07;
+  }
+  .button:hover,
+  .button:focus {
+    color: #ffffff;
+    background: #404bbf;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
 /* Desktop styles 1158px & > */
 @media only screen and (min-width: 1158px) {
   .hero {
     max-width: 1440px;
     padding: 188px 0;
   }
-}
-
-.hero-text {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 48px;
-
-  text-align: center;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  color: #ffffff;
+  .hero-text {
+    margin-bottom: 48px;
+  }
 }
 
 /**
@@ -397,11 +401,8 @@ img {
 }
 .features-text {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #434455;
 }
+
 .sub-title {
   margin-bottom: 72px;
 
