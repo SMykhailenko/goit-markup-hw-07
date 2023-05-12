@@ -919,11 +919,11 @@ img {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  background: #e7e9fc;
+
   opacity: 0.1;
+
   border: 1px solid #2e2f42;
-}
-.menu-burger {
+  background: #e7e9fc;
 }
 
 @media (min-width: 768px) {
@@ -968,6 +968,12 @@ img {
   right: 16px;
   color: #fff;
 }
+.menu-toggle-burger {
+  stroke: #2e2f42;
+}
+.menu-toggle-cross {
+  fill: #2e2f42;
+}
 
 .mobile-menu {
   padding: 0;
@@ -998,16 +1004,37 @@ img {
   color: #2e2f42;
 }
 .mobile-contacts {
+  margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 48px;
 }
-.mobile-menu-adr {
+
+@media only screen and (max-width: 427px) {
+  .mobile-menu-phone {
+    font-size: 28px;
+  }
+}
+.mobile-menu-phone {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.1;
   letter-spacing: 0.02em;
+
+  color: #4d5ae5;
+}
+@media only screen and (max-width: 427px) {
+  .mobile-menu-phone {
+    font-size: 25px;
+  }
+}
+.mobile-menu-adr {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+
+  color: #434455;
 }
 .mobile-menu .link {
   display: block;
@@ -1019,6 +1046,11 @@ img {
   display: flex;
   justify-items: center;
   gap: 56px;
+}
+@media only screen and (max-width: 427px) {
+  .mobile-foot-social {
+    gap: 30px;
+  }
 }
 /**
   |============================
