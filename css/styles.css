@@ -72,8 +72,8 @@ img {
 @media only screen and (min-width: 768px) {
   .container {
     max-width: 736px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
 
@@ -81,6 +81,8 @@ img {
 @media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 /**
@@ -198,17 +200,21 @@ img {
     align-items: center;
     margin-right: auto;
   }
+  .logo-top {
+    padding: 0;
+  }
+  .logo {
+    padding: 24px 0;
+  }
   .adr {
     display: flex;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column;
+    gap: 12px;
   }
-  .helper-components,
-  .contact-link,
-  .logo-top {
-    padding-top: 24px;
-    padding-bottom: 24px;
+  .mail {
+    margin-right: auto;
   }
+
   .helper-components::after {
     content: "";
 
@@ -249,11 +255,12 @@ img {
 @media only screen and (min-width: 1158px) {
   .logo {
     margin-right: 76px;
+    margin-left: auto;
   }
   .help-hat-container-top {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    /* display: flex;
+    align-items: center; */
+    gap: 0px;
     margin-right: auto;
   }
   .help-hat-container {
@@ -261,18 +268,19 @@ img {
     align-items: center;
     margin-right: auto;
   }
+  .help-hat {
+    margin-right: auto;
+  }
   .adr {
     display: flex;
     align-items: center;
+    flex-direction: row;
     gap: 40px;
   }
   .nav-list {
     display: flex;
     align-items: center;
     gap: 40px;
-  }
-  .mail {
-    margin-right: 40px;
   }
 }
 
@@ -623,8 +631,9 @@ img {
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
   .custom {
-    margin-left: 77px;
-    margin-right: 77px;
+    max-width: 552px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .cs-list {
     column-gap: 24px;
@@ -644,8 +653,7 @@ img {
 /* Desktop styles 1158px & > */
 @media only screen and (min-width: 1158px) {
   .custom {
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1152px;
   }
   .cs-frames {
     width: calc((100% - 120px) / 6);
@@ -920,8 +928,6 @@ img {
   height: 24px;
   border-radius: 50%;
 
-  opacity: 0.1;
-
   border: 1px solid #2e2f42;
   background: #e7e9fc;
 }
@@ -1005,6 +1011,7 @@ img {
 }
 
 .mobile-contacts {
+  margin-bottom: 48px;
   display: flex;
   flex-direction: column;
   gap: 40px;
