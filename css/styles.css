@@ -261,8 +261,6 @@ img {
     margin-left: auto;
   }
   .help-hat-container-top {
-    /* display: flex;
-    align-items: center; */
     gap: 0px;
     margin-right: auto;
   }
@@ -678,6 +676,7 @@ img {
             Footer
   |============================
 */
+
 .footer-line {
   padding: 96px 0;
 
@@ -788,6 +787,11 @@ img {
   background: #4d5ae5;
   border-radius: 4px;
   border: none;
+}
+@media only screen and (max-width: 427px) {
+  .footer-email {
+    width: 300px;
+  }
 }
 @media only screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-width {
