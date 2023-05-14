@@ -74,7 +74,7 @@ img {
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -213,6 +213,13 @@ img {
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    font-size: 12px;
+    line-height: 1.17;
+
+    letter-spacing: 0.04em;
+
+    color: #434455;
   }
   .mail {
     margin-right: auto;
@@ -227,7 +234,7 @@ img {
 
     position: absolute;
     display: block;
-    bottom: -3px;
+    bottom: -26px;
     left: 0;
     width: 100%;
     height: 4px;
@@ -258,7 +265,6 @@ img {
 @media only screen and (min-width: 1158px) {
   .logo {
     margin-right: 76px;
-    margin-left: auto;
   }
   .help-hat-container-top {
     gap: 0px;
@@ -269,14 +275,16 @@ img {
     align-items: center;
     margin-right: auto;
   }
-  .help-hat {
-    margin-right: auto;
-  }
+
   .adr {
     display: flex;
     align-items: center;
     flex-direction: row;
     gap: 40px;
+
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
   .nav-list {
     display: flex;
@@ -296,17 +304,36 @@ img {
   margin-right: auto;
   text-align: center;
 
-  background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
     url(../images/Hero/hero-mob@1x.jpg);
 
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Hero/hero-mob@2x.jpg);
+  }
+}
 .hero-text {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 72px;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
 
   text-align: center;
   letter-spacing: 0.02em;
@@ -332,32 +359,61 @@ img {
   transition-timing-function: var(--cubic-hover);
 }
 
-@media only screen and (min-width: 429px) and (max-width: 767px) {
+@media only screen and (min-width: 428px) and (max-width: 767px) {
   .hero {
-    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/Hero/hero-desk@1x.jpg);
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/Hero/hero-tab@1x.jpg);
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Hero/hero-tab@2x.jpg);
+    }
   }
 }
 /* Tablet styles 768px & > */
 @media only screen and (min-width: 768px) {
   .hero {
-    background: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
       url(../images/Hero/hero-desk@1x.jpg);
   }
-  .hero-text {
-    margin-bottom: 36px;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/Hero/hero-desk@2x.jpg);
+    }
+  }
+}
+.hero-text {
+  margin-bottom: 36px;
 
-    max-width: 496px;
-    margin-bottom: 36px;
-    font-size: 56px;
-    line-height: 1.07;
-  }
-  .button:hover,
-  .button:focus {
-    color: #ffffff;
-    background: #404bbf;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  }
+  max-width: 496px;
+  margin-bottom: 36px;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+}
+.button:hover,
+.button:focus {
+  color: #ffffff;
+  background: #404bbf;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Desktop styles 1158px & > */
@@ -505,7 +561,8 @@ img {
 
 .team-background {
   justify-content: center;
-  margin: 120px 0;
+  margin: 96px 0;
+  padding: 96px 0;
 
   background: #f4f4fd;
 }
@@ -593,6 +650,10 @@ img {
   .container {
     width: 1158px;
   }
+  .team-background {
+    margin: 120px 0;
+    padding: 120px 0;
+  }
 }
 
 /**
@@ -601,7 +662,6 @@ img {
   |============================
 */
 .customer-section {
-  margin-top: 120px;
   margin-bottom: 120px;
 }
 
@@ -694,6 +754,7 @@ img {
   align-items: center;
 }
 .logo-bot {
+  font-family: "Raleway", sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
@@ -771,12 +832,22 @@ img {
 
 .Subscribe-btn {
   position: relative;
+
   margin: 0 auto;
+
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: left;
 
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
   width: 165px;
   height: 40px;
   padding: 8px 24px;
@@ -833,6 +904,7 @@ img {
   }
 
   .social-media {
+    text-align: left;
     font-weight: 500;
     color: #ffffff;
     margin-bottom: 16px;
@@ -920,8 +992,6 @@ img {
 */
 
 .menu-toggle {
-  min-height: 40px;
-  min-width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -935,14 +1005,18 @@ img {
   outline: none;
 }
 .menu-close {
+  padding: 7px;
   width: 24px;
   height: 24px;
   border-radius: 50%;
 
-  border: 1px solid #2e2f42;
+  border: 1px solid opacity 0.1 #2e2f42;
   background: #e7e9fc;
 }
 
+.menu-toggle-cross {
+  fill: #2e2f42;
+}
 @media (min-width: 768px) {
   .menu-toggle {
     display: none;
@@ -1078,6 +1152,7 @@ img {
   | Modal window
   |============================
 */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -1085,6 +1160,8 @@ img {
 
   width: 100%;
   height: 100%;
+
+  overflow: scroll;
 
   z-index: var(--modal-idx);
   transition: opacity 250ms var(--cubic-hover),
@@ -1099,9 +1176,10 @@ img {
 
 .modal {
   position: absolute;
-  padding: 72px 24px 24px;
+  padding: 72px 24px 24px 24px;
+
   width: 408px;
-  height: 576px;
+  min-height: 576px;
   top: 50%;
   left: 50%;
 
@@ -1279,6 +1357,14 @@ img {
 
 .modal-form-agreement-link {
   color: #4d5ae5;
+}
+@media only screen and (max-width: 427px) {
+  .modal {
+    width: 320px;
+  }
+  .modal-form-input {
+    width: 100%;
+  }
 }
 /**
   |============================
